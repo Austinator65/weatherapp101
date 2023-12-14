@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+}
+body {
+    display: grid;
+    place-items: center;
+}
+
+.grid {
+    inline-size: 90%;
+    margin-inline: auto;
+    max-inline-size: 20rem;
+}
+form {
+    margin:0 auto;
+    height: 400px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+}
+input {
+    margin-bottom:3px;
+    padding:10px;
+    width: 100%;
+    border:1px solid #CCC
+}
+
+/*.center-form {*/
+/*    //background: #222;*/
+/*    box-shadow: 0 0 1rem rgba(0,0,0,0.3);*/
+/*        width: 400px;*/
+/*        height: 400px;*/
+/*        margin: 500px;*/
+/*        padding: 30px;*/
+/*        //align-content: center;*/
+/*    //justify-content: center;*/
+
+/*}*/
+
+.login-submit {
+    background: transparent;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    min-width: 1px;
+
+    transition: 250ms background ease-in;
+}
