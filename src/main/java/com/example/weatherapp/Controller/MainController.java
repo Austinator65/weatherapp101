@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/main")
 public class MainController {
     @GetMapping
-    public String showSignupForm(Model model) {
+    public String showSignupForm(@ModelAttribute("userDto") UserDto userDto) {
+            System.out.println("Received UserDto: " + userDto);
 
-        return "test";
+            System.out.println(getUserDto());
     }
 
 

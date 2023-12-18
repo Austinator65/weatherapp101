@@ -12,12 +12,12 @@
         <div class="inner-box" id="card">
             <div class="card-front">
                 <h2>LOGIN</h2>
-                <form th:action="@{/login}" method="post">
+                <form th:action="@{/login}" method="post" th:object="@{userDto}">
                     <label>
-                        <input type="email" class="input-box" placeholder="example@mail.com" required>
+                        <input type="email" class="input-box" placeholder="example@mail.com" th:field="*{email}" required>
                     </label>
                     <label>
-                        <input type="password" class="input-box" placeholder="Password" required>
+                        <input type="password" class="input-box" placeholder="Password"  th:field="*{password}" required>
                     </label>
                     <button type="submit" class="submit-btn">Submit</button>
                     <label>
