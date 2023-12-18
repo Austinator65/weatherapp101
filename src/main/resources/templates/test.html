@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/weatherstyle.css">
+    <title>Weather App</title>
 </head>
 <body>
-$END$
+
+<header>
+    <h1 class="header">Weather</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Weather Search</h2>
+        <form id="weatherForm">
+            <select id="unitSelect">
+                <option value="F">Fahrenheit</option>
+                <option value="C">Celsius</option>
+            </select>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button type="button" id="showWeatherButton">Search</button>
+        </form>
+    </section>
+
+    <section id="weatherResults" style="display: none;">
+        <h2>Current Weather</h2>
+        <div id="currentLocationTitle"></div>
+        <div id="currentTemp"></div>
+        <div id="currentDescr"></div>
+        <img id="weatherIcon" alt="Weather Icon">
+    </section>
+
+    <section id="dashboard" style="display: none;">
+        <h2>Weather Dashboard</h2>
+        <div id="mainWeatherDescription"></div>
+        <div id="minTemp"></div>
+        <div id="maxTemp"></div>
+        <div id="pressure"></div>
+        <div id="humidity"></div>
+        <div id="windSpeed"></div>
+        <div id="sunRise"></div>
+        <div id="sunSet"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Weather App</p>
+</footer>
+
 </body>
 </html>

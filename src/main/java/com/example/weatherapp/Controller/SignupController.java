@@ -29,8 +29,11 @@ public class SignupController {
 
     @PostMapping
     public String login(@ModelAttribute("userDto") UserDto userDto){
-       // userService.registerUser(userDto);
-        System.out.println(userDto.getFirstName());
+        System.out.println("Received UserDto: " + userDto);
+        //System.out.println(userDto.getFirstName());
+        //setUserDto(userDto);
+        userService.registerUser(userDto);
+        System.out.println(getUserDto());
         return "redirect:/login";
     }
 

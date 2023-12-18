@@ -12,7 +12,7 @@ import java.util.Optional;
 @Service
 @Data
 public class UserService {
-   // @Autowired
+    @Autowired
     private final UserRepository userRepository;
 
 
@@ -21,11 +21,14 @@ public class UserService {
     }
     public void registerUser(UserDto userDto){
         User user = new User();
+        System.out.println("Serveci data: " + userDto.getFirstName());
         user.setFirstName(userDto.getFirstName());
-        user.setPassword(userDto.getLastName());
+        user.setLastName(userDto.getLastName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
+        System.out.println("Main user: "+user.getFirstName());
         userRepository.save(user);
+
         //return employee.getEmployeename();
     };
 

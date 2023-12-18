@@ -25,6 +25,7 @@ public class DatabaseConnectionTest {
         try {
             long userCount = userRepository.count();
             assertThat(userCount).isGreaterThanOrEqualTo(0L);
+            System.out.println(userRepository.count());
         } catch (Exception e) {
             System.out.println("Connection failed");
         }

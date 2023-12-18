@@ -1,50 +1,148 @@
-body, html {
-    height: 100%;
-}
-body {
-    display: grid;
-    place-items: center;
-}
-
-.grid {
-    inline-size: 90%;
-    margin-inline: auto;
-    max-inline-size: 20rem;
-}
-form {
-    margin:0 auto;
-    height: 400px;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-}
-input {
-    margin-bottom:3px;
-    padding:10px;
-    width: 100%;
-    border:1px solid #CCC
-}
-
-/*.center-form {*/
-/*    //background: #222;*/
-/*    box-shadow: 0 0 1rem rgba(0,0,0,0.3);*/
-/*        width: 400px;*/
-/*        height: 400px;*/
-/*        margin: 500px;*/
-/*        padding: 30px;*/
-/*        //align-content: center;*/
-/*    //justify-content: center;*/
-
-/*}*/
-
-.login-submit {
-    background: transparent;
+/* :host([theme~="custom-css-view"]) [part~="button"] {
+    background-color: blue;
     color: white;
-    display: block;
-    margin: 1rem auto;
-    min-width: 1px;
+    border: none;
+    padding: 10px;
+} */
+.background-layout{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url('medium2.0.jpg');
+    background-size: cover;
+    position: relative;
+}
+.background-layout::before {
+    content: '';
 
-    transition: 250ms background ease-in;
+    /* Set the size to cover the entire container */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Apply the blur effect */
+    backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
+
+    /* Set the background color with transparency */
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust the alpha value for transparency */
+
+    /* Make the layer float by adjusting size and opacity */
+    width: 90%; /* Adjust the width as needed */
+    height: 90%; /* Adjust the height as needed */
+    opacity: 0.3; /* Adjust the opacity as needed */
+    margin: auto; /* Center the layer */
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+}
+
+.logo{
+    position: relative;
+    z-index: 1;
+}
+.header{
+    position: relative;
+    z-index: 1;
+    margin-top: 35px;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+}
+
+.bordered-text-field {
+    position: relative;
+    z-index: 1;
+    border: 0.2px solid #999999;
+    border-width: 0px 2px 2px 0px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* Optional: Add rounded corners */ /* Optional: Add padding for better visual appearance */
+}
+
+.textFloat{
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    color:rgb(0, 0, 0);
+}
+
+.descpane{
+    position: relative;
+    z-index: 1;
+    /* background-color: rgba(255, 255, 255, 0.077); */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    width: auto;
+
+
+}
+.h3Text{
+    position: relative;
+    z-index: 1;
+    color:rgba(255, 255, 255, 0.772);
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+select, input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#weatherResults img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
