@@ -2,34 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Signup</title>
+    <title>Hello</title>
+    <link rel="stylesheet" href="/css/test.css">
 </head>
+
 <body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-back">
+        <h2>SIGNUP</h2>
+        <form th:action="@{/signup}" method="post" class="register-form" th:object="${userDto}">
+            <label>
+                <input type="text" class="input-box" name="firstname" placeholder="First name"  th:field="*{firstName}" required>
+            </label>
+            <label>
+                <input type="text" class="input-box" name="lastname" placeholder="lastName" th:field="*{lastName}" required>
+            </label>
 
-    <form th:action="@{/signup}" method="post" class="register-form" th:object="${userDto}" >
+            <label>
+                <input type="email" class="input-box" name="email" placeholder="email address" th:field="*{email}" required>
+            </label>
 
-        <label>
-        <input type="text" name="firstname" placeholder="First name"  th:field="*{firstName}" required>
-        </label>
-
-        <label>
-            <input type="text" name="lastname" placeholder="lastName" required>
-        </label>
-
-        <label>
-            <input type="email" name="email" placeholder="email address" required>
-        </label>
-
-        <label>
-            <input type="password" name="password" placeholder="Password" required/>
-        </label>
-
-        <button type="submit" name="signup">Register</button>
-    </form>
-
-
-    <p class="message">Already registered? <a href="/login" methods="get">Sign In</a></p>
-
-
+            <label>
+                <input type="password" class="input-box" placeholder="Password" th:field="*{password}" required>
+            </label>
+            <button type="submit" class="submit-btn">Submit</button>
+            <label>
+                <input type="checkbox">
+            </label><span>Remember Me</span>
+        </form>
+                    <a href="login" methods="get">
+        <button type="button" class="btn">I've an account</button>
+                    </a>
+                    <a href="#">Forget Password</a>
+    </div>
+    </div>
+        </div>
+    </div>
 </body>
 </html>
